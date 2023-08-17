@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of DOM</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!--    etElementById  single element ney
+            getElementsByTagName  HTMLcollection
+            querySelector  
+            querySelectorAll -->
 </head>
 <body>
-    
+    <h1>DOM de baba dom de</h1>
+    <ul>
+        <li>amit</li>
+        <li>mahmud</li>
+        <li>sabbir</li>
+    </ul>
+    <h1>vallagena</h1>
+    <ul id="vallagena" class="vallagena">
+        <li>ki kori?1</li>
+        <li>ki kori?2</li>
+        <li>ki kori?3</li>
+    </ul>
+    <h1 id="uiu">UIU</h1>
+    <ul>
+        <li>011213078</li>
+        <li>fall 21</li>
+        <li>sabbir</li>
+    </ul>
+    <script>
+        const liCollection2 = document.getElementById("vallagena"); //single element by ID
+
+        const liCollection = document.getElementsByTagName('li');  //HTMLcollection by 'tag name'
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+        document.querySelector('.vallagena li'); // single element by 'class'
+        document.querySelectorAll('.vallagena li'); //get NodeList by 'class'
+
+        
+    </script>
 </body>
 </html>
