@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media</title>
+</head>
+<body>
+    <main id="main-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, vel consequatur. Tempore dolorum, quis aliquid fuga praesentium suscipit. Aperiam, cumque.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem nulla aspernatur magnam quos esse fugiat sequi debitis perspiciatis provident ex explicabo deserunt, minima mollitia? Reprehenderit praesentium sunt veritatis a, odio unde qui tenetur ipsa similique architecto culpa fuga, totam magni.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta adipisci id dolorum perferendis at! Ad, porro. Error maxime reprehenderit quo ullam suscipit atque cumque rerum dolorum voluptate fuga ipsa quisquam repudiandae saepe molestiae accusamus repellat itaque illo necessitatibus sit eum, ex vel aliquid iste ratione. Labore fuga quo nesciunt nulla?</p>
+    </main>
+    <textarea name="" id="comment-input" cols="50" rows="5"></textarea> <br>
+    <button id="comment-button">Comment</button>
+        <script>
+            const commentButton = document.getElementById('comment-button');
+            commentButton.addEventListener('click', function(){
+                const textArea = document.getElementById('comment-input');
+                const textAreaValue = textArea.value;
+                // console.log(textAreaValue)
+                const mainContainer = document.getElementById('main-container');
+                const p = document.createElement('p');
+                p.innerText = textAreaValue;
+                mainContainer.append(p);
+                textArea.value = '';
+            })
+        </script>
+</body>
+</html>
