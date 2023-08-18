@@ -40,6 +40,7 @@ sectionDress.innerHTML = `
         <li>T-shirt</li>
         <li>T-genji</li>
         <li>T-pant</li>
+        <li>Lungi</li>
     </ul>
 `
 main.appendChild(sectionDress);
