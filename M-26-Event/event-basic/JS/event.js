@@ -1,3 +1,5 @@
+// basics
+
 // console.log("this is a seperate event file")
 
 // option 1  directly write on the tag
@@ -13,7 +15,7 @@ function makeBlue(){
 const makeBlueButton = document.getElementById('make-blue');
 makeBlueButton.onclick = makeBlue;
 
-// option 4  direct fucntion on the button
+// option 4  direct fucntion on the button 
 const makePurpleButton = document.getElementById('make-purple');
 makePurpleButton.onclick = function(){
     document.body.style.backgroundColor = 'purple';
