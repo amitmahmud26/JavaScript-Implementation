@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text">Previous Text</h1>
+    <button onclick="changeText()">Change Text</button>
+    <button id="change-text">Final Change Text</button>
+    <h2 id="default-text">Default Text</h2>
+    <input id="input-field" type="text">
+    <button id="update-button">Update</button>
+    <script>
+        // different option
+        function changeText(){
+            const text = document.getElementById('text');
+            text.innerText = "Text changed by alternative option";
+        }
+        // main option
+        document.getElementById('change-text').addEventListener('click', function(){
+            document.getElementById('text').innerText = "Text changed by main option";
+        })
+        // update value getting from input text
+        document.getElementById('update-button').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field');
+            const inputValue = inputField.value;
+            const defaultText = document.getElementById('default-text');
+            defaultText.innerText = inputValue;
+            inputField.value = '';
+        })
+    </script>
+</body>
+</html>
