@@ -4,3 +4,12 @@ li{
 h1{
     color: blue;
 }
+.yellow-bg{
+    background-color: yellowgreen;
+}
+.text-center{
+    text-align: center;
+}
+.large-text{
+    font-size: 2em;
+}
