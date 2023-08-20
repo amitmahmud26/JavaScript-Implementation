@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Example</title>
+</head>
+<body>
+    <ul id="task-list">
+        <li>Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>
+        <li>Task 4</li>
+    </ul>
+
+    <button id="add-task">Add Task</button>
+
+    <script>
+        // Get the parent element that will delegate the event (ul in this case)
+        const taskList = document.getElementById('task-list');
+
+        // Add a click event listener to the parent element
+        taskList.addEventListener('click', function(event) {
+            // Check if the clicked element is an <li> element
+            if (event.target.tagName === 'LI') {
+                // Remove the clicked <li> element from the list
+                event.target.remove();
+            }
+        });
+
+        // Example of adding a new task
+        const addTaskButton = document.getElementById('add-task');
+        addTaskButton.addEventListener('click', function() {
+            const newTask = document.createElement('li');
+            newTask.textContent = 'New Task';
+            taskList.appendChild(newTask);
+        });
+    </script>
+</body>
+</html>
