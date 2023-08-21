@@ -11,7 +11,7 @@
     <button id="change-text">Final Change Text</button>
     <h2 id="default-text">Default Text</h2>
     <input id="input-field" type="text">
-    <button id="update-button">Update</button>
+    <button id="update-btn">Update</button>
     <script>
         // different option
         function changeText(){
@@ -23,7 +23,7 @@
             document.getElementById('text').innerText = "Text changed by main option";
         })
         // update value getting from input text
-        document.getElementById('update-button').addEventListener('click', function(){
+        document.getElementById('update-btn').addEventListener('click', function(){
             const inputField = document.getElementById('input-field');
             const inputValue = inputField.value;
             const defaultText = document.getElementById('default-text');
