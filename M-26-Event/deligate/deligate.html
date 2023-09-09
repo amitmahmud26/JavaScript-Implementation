@@ -20,7 +20,7 @@
         const taskList = document.getElementById('task-list');
 
         // Add a click event listener to the parent element
-        taskList.addEventListener('click', function(event) {
+        taskList.addEventListener('Click', function(event) {
             // Check if the clicked element is an <li> element
             if (event.target.tagName === 'LI') {
                 // Remove the clicked <li> element from the list
@@ -30,7 +30,7 @@
 
         // Example of adding a new task
         const addTaskButton = document.getElementById('add-task');
-        addTaskButton.addEventListener('click', function() {
+        addTaskButton.addEventListener('Click', function() {
             const newTask = document.createElement('li');
             newTask.textContent = 'New Task';
             taskList.appendChild(newTask);
